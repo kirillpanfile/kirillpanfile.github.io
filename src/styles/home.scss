@@ -1,6 +1,9 @@
 //====================================================================================================
+body {
+  background: #121a29;
+  height: max-content;
+}
 .hero {
-  background: url("../assets/bg-main.png") center center/cover no-repeat;
   &__container {
     background: url("../assets/bg-inner.png") center center/cover no-repeat;
   }
@@ -12,27 +15,38 @@
     font-weight: 400;
     font-size: 64px;
     line-height: 87px;
+    @include adaptiveValue("font-size", 64, 32);
     span {
       color: $dotColor;
     }
   }
 
   &__content {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
     margin-top: 115px;
+    @include adaptiveValue(" margin-top", 115, 32);
   }
 
   &__content-title {
     font-style: normal;
     font-weight: 700;
-    font-size: 64px;
-    line-height: 89px;
+    @include adaptiveValue("font-size", 64, 28);
+    @include adaptiveValue("line-height", 89, 43);
     color: $textColor;
     span {
       background: $logoColor;
+      background-size: 200% auto;
+      background-clip: text;
+      text-fill-color: transparent;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      animation: shine 1.6s linear infinite;
+      @keyframes shine {
+        to {
+          background-position: -200% center;
+        }
+      }
     }
   }
 
@@ -40,12 +54,18 @@
     margin-top: 30px;
     font-style: normal;
     font-weight: 400;
-    font-size: 24px;
+    @include adaptiveValue("font-size", 24, 16);
+    line-height: 24px;
+    @media (max-width: $tablet) {
+      width: 90%;
+    }
     color: #f9fafb;
   }
 
   &__content-button {
     margin-top: 119px;
+    @include adaptiveValue(" margin-top", 119, 64);
   }
 }
+
 //====================================================================================================

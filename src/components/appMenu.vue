@@ -1,8 +1,12 @@
 <template>
   <div class="menu">
     <div class="menu__inner">
-      <div class="menu-icon" v-for="(icon, index) in icons" :key="index">
-        <img :src="require(`../assets/icons/${icon}.png`)" alt="" />
+      <div v-for="(icon, index) in icons.count" :key="index">
+        <router-link to="">
+          <button class="menu-icon">
+            <img :src="require(`../assets/icons/${icon}.png`)" alt="" />
+          </button>
+        </router-link>
       </div>
     </div>
   </div>
@@ -13,7 +17,9 @@ export default {
   name: "appMenu",
   data() {
     return {
-      icons: [1, 2, 3, 4, 5, 6, 7, 8, 9],
+      icons: {
+        count: [1, 2, 3, 4, 5, 6],
+      },
     };
   },
 };

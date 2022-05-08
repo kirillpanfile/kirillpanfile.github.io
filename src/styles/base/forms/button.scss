@@ -11,6 +11,7 @@
   width: max-content;
   padding: 13px 58px;
   border-radius: 8px;
+  transition: 0.3s ease-in-out;
 }
 
 .btn-primary {
@@ -27,5 +28,14 @@
     height: 100%;
     border: 3px solid $mainColor;
     border-radius: 8px;
+    transition: 0.3s ease-in-out;
+  }
+  &:hover {
+    background: none;
+    &::before {
+      // opacity: 0.5;
+      top: 0;
+      left: 0;
+    }
   }
 }
