@@ -18,7 +18,6 @@
           <app-button>Say Hello</app-button>
         </div>
       </div>
-      <app-menu></app-menu>
     </div>
   </div>
 </template>
@@ -26,6 +25,7 @@
 <script>
 import appButton from "../components/appButton.vue";
 import appBubbles from "../components/appBubbles.vue";
+
 export default {
   name: "home",
   components: {

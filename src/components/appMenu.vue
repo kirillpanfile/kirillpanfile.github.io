@@ -1,18 +1,36 @@
 <template>
   <div class="menu">
     <div class="menu__inner">
-      <div v-for="(icon, index) in icons.count" :key="index">
-        <router-link :to="icons.pages[index]" v-if="icon < 3">
-          <button class="menu-icon">
-            <img :src="require(`../assets/icons/${icon}.png`)" alt="" />
-          </button>
-        </router-link>
-        <a v-else>
-          <button class="menu-icon">
-            <img :src="require(`../assets/icons/${icon}.png`)" alt="" />
-          </button>
-        </a>
-      </div>
+      <router-link to="/">
+        <button class="menu-icon">
+          <img src="../assets/icons/1.png" alt="" />
+        </button>
+      </router-link>
+      <router-link to="/portfolio">
+        <button class="menu-icon">
+          <img src="../assets/icons/2.png" alt="" />
+        </button>
+      </router-link>
+      <router-link to="/about">
+        <button class="menu-icon">
+          <img src="../assets/icons/3.png" alt="" />
+        </button>
+      </router-link>
+      <a href="https://instagram.com">
+        <button class="menu-icon">
+          <img src="../assets/icons/4.png" alt="" />
+        </button>
+      </a>
+      <a href="">
+        <button class="menu-icon">
+          <img src="../assets/icons/5.png" alt="" />
+        </button>
+      </a>
+      <a href="">
+        <button class="menu-icon">
+          <img src="../assets/icons/6.png" alt="" />
+        </button>
+      </a>
     </div>
   </div>
 </template>
@@ -20,14 +38,6 @@
 <script>
 export default {
   name: "appMenu",
-  data() {
-    return {
-      icons: {
-        count: [1, 2, 3, 4, 5, 6],
-        pages: ["/", "/portfolio", "/about"],
-      },
-    };
-  },
 };
 </script>
 
