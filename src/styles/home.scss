@@ -1,3 +1,51 @@
 //====================================================================================================
+.hero {
+  background: url("../assets/bg-main.png") center center/cover no-repeat;
+  &__container {
+    background: url("../assets/bg-inner.png") center center/cover no-repeat;
+  }
 
+  &__logo {
+    padding-top: 26px;
+    font-family: "Yellowtail";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 87px;
+    span {
+      color: $dotColor;
+    }
+  }
+
+  &__content {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 115px;
+  }
+
+  &__content-title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 89px;
+    color: $textColor;
+    span {
+      background: $logoColor;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  &__content-descr {
+    margin-top: 30px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    color: #f9fafb;
+  }
+
+  &__content-button {
+    margin-top: 119px;
+  }
+}
 //====================================================================================================

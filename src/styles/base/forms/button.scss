@@ -1,14 +1,31 @@
 //<BUTTONS (a.btn+tab)>
 // Снипет (HTML): btn
 
-.button {
-	display: inline-flex;
-	padding: 0px 0px;
-	@media (any-hover: hover) {
-		&:hover {
-		}
-	}
-	&._fw {
-		width: 100%;
-	}
+.btn {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  width: max-content;
+  padding: 13px 58px;
+  border-radius: 8px;
+}
+
+.btn-primary {
+  position: relative;
+  color: $textColor;
+  background-color: $mainColor;
+  &::before {
+    z-index: 1;
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    width: 100%;
+    height: 100%;
+    border: 3px solid $mainColor;
+    border-radius: 8px;
+  }
 }
