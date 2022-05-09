@@ -17,12 +17,6 @@ export default {
 };
 </script>
 <style lang="scss">
-* {
-  cursor: url("https://www.pixelliongroup.com/img/cursor.png"), auto;
-}
-*:hover {
-  cursor: url("https://www.pixelliongroup.com/img/cursor.png"), auto;
-}
 #app {
   position: relative;
   min-height: 100vh;

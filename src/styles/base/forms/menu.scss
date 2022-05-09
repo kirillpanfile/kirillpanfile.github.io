@@ -2,8 +2,8 @@
   max-width: 1000px;
   margin: 0 auto;
   @include adaptiveValue("margin-top", 126, 80);
+  padding-bottom: 40px;
   &__inner {
-    background: #111827;
     border: 1px solid #374151;
     box-shadow: -24px 24px 64px #111827;
     border-radius: 24px;
@@ -11,7 +11,6 @@
     padding: 10px;
     display: flex;
     margin: 0 auto;
-    gap: 38px;
     @include adaptiveValue("gap", 38, 4);
     a {
       display: block;
@@ -34,5 +33,9 @@
   img {
     margin: 10px;
     @include adaptiveValue("width", 30, 15);
+  }
+  transition: 0.3s ease-in-out;
+  &::hover {
+    opacity: 0.7;
   }
 }
