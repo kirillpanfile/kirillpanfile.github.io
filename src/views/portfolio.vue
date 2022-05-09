@@ -30,6 +30,28 @@
               </div>
             </div>
           </div>
+          <div class="projects-inner__list-item list-item reversed">
+            <div class="list-item__block list-block">
+              <div class="list-block__title">
+                <a href=""> Brutal Design Library </a>
+              </div>
+              <div class="list-block__descr">
+                Brutal is a remote friendly-company — with our headquarters in
+                San Francisco, a second office in LA, and a strong commitment to
+                ensuring people can do great work here and thrive without having
+                to live near an office. This role is open to candidates across
+                the U.S.
+              </div>
+              <div class="list-block__button">
+                <app-button>View project</app-button>
+              </div>
+            </div>
+            <div class="list-item__block list-block">
+              <div class="list-block__image">
+                <img src="../assets/page-2.png" alt="" />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

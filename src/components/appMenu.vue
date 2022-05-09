@@ -1,17 +1,17 @@
 <template>
   <div class="menu">
     <div class="menu__inner">
-      <router-link to="/">
+      <router-link to="/" @click.native="scrollToTop">
         <button class="menu-icon">
           <img src="../assets/icons/1.png" alt="" />
         </button>
       </router-link>
-      <router-link to="/portfolio">
+      <router-link to="/portfolio" @click.native="scrollToTop">
         <button class="menu-icon">
           <img src="../assets/icons/2.png" alt="" />
         </button>
       </router-link>
-      <router-link to="/about">
+      <router-link to="/about" @click.native="scrollToTop">
         <button class="menu-icon">
           <img src="../assets/icons/3.png" alt="" />
         </button>
@@ -38,6 +38,11 @@
 <script>
 export default {
   name: "appMenu",
+  methods: {
+    scrollToTop() {
+      window.scrollTo(0, 0);
+    },
+  },
 };
 </script>
 

@@ -11,6 +11,9 @@ const routes = [
     path: "/portfolio",
     name: "portfolio",
     component: () => import("../views/portfolio.vue"),
+    meta: {
+      transition: "fade",
+    },
   },
   {
     path: "/about",

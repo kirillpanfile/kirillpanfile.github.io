@@ -1,24 +1,34 @@
+.projects {
+  background: url("../assets/bg-inner.png") top center repeat-y;
+}
 .projects-inner {
   display: flex;
   flex-direction: column;
   overflow: hidden;
   justify-content: center;
   max-width: 1030px;
+  @media (max-width: $mobile) {
+    justify-content: flex-start;
+  }
   margin: 0 auto;
   &__title {
     font-style: normal;
     font-weight: 700;
-    font-size: 64px;
+    @include adaptiveValue("font-size", 64, 32);
     line-height: 98px;
     color: $textColor;
     margin-top: 48px;
+    @media (max-width: $mobile) {
+      margin-top: 0;
+    }
   }
 
   &__descr {
     font-style: normal;
     font-weight: 300;
-    font-size: 24px;
-    line-height: 37px;
+    @include adaptiveValue("font-size", 24, 16);
+    width: 85%;
+    line-height: 24px;
     color: $textColor;
   }
 
@@ -30,16 +40,35 @@
   }
 
   &__list-item {
+    margin-top: 20px;
     display: flex;
-    gap: 48px;
+    @include adaptiveValue("gap", 48, 0);
     align-items: center;
     justify-content: space-around;
+
+    flex-shrink: 1;
+    @media (max-width: $mobile) {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+    }
+  }
+}
+.reversed {
+  display: flex;
+  @include adaptiveValue("gap", 48, 0);
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row-reverse;
+  flex-shrink: 1;
+  @media (max-width: $mobile) {
+    flex-direction: column-reverse;
+    align-items: flex-start;
   }
 }
 .list-item {
   &__block {
-    margin-top: 64px;
-    margin-bottom: 48px;
+    @include adaptiveValue("margin-top", 64, 0);
+    @include adaptiveValue("margin-bottom", 48, 0);
   }
 }
 .list-block {
@@ -47,6 +76,7 @@
     font-style: normal;
     font-weight: 700;
     font-size: 40px;
+    @include adaptiveValue("font-size", 40, 28);
     line-height: 71px;
     color: $textColor;
   }
@@ -56,21 +86,30 @@
     font-weight: 300;
     font-size: 16px;
     line-height: 24px;
-    margin-top: 24px;
+    @include adaptiveValue("margin-top", 24, 16);
     color: $textColor;
   }
 
   &__button {
-    margin-top: 56px;
+    @include adaptiveValue("margin-top", 56, 40);
   }
 
   &__image {
     width: 430px;
     height: 320px;
+    @include adaptiveValue("width", 430, 309);
+    @include adaptiveValue("height", 320, 200);
     img {
-      object-fit: cover;
+      display: block;
+      // object-fit: cover;
       width: 100%;
       height: 100%;
+    }
+    @media (max-width: $mobile) {
+      margin-top: 46px;
+      // width: 305px !important;
+      // height: 200px !important;
+      width: 100%;
     }
   }
 }

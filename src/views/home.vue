@@ -4,6 +4,7 @@
     <div class="hero__container">
       <app-logo></app-logo>
       <div class="hero__content">
+        <app-canvas class="canvas"></app-canvas>
         <div class="hero__content-title">
           Hello!👋🏻 <br />
           My name is Kirill <br />
@@ -22,7 +23,13 @@
 </template>
 
 <script>
+import appCanvas from "../components/appCanvas.vue";
 export default {
   name: "home",
+  components: {
+    appCanvas,
+  },
 };
 </script>
+
+<style></style>

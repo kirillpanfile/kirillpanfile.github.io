@@ -4,24 +4,25 @@ body {
   height: max-content;
 }
 .hero {
-  &::before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background: url("../assets/undraw_my_personal_files_re_3q0p.svg") no-repeat
-      right;
-    background-position: 900px 200px;
-    @media (max-width: $mobile) {
-      background-position: 100px 200px;
-    }
-    opacity: 0.05;
-    content: "";
-    z-index: -1;
-  }
   &__container {
+    position: relative;
     background: url("../assets/bg-inner.png") center center/cover no-repeat;
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background: url("../assets/undraw_my_personal_files_re_3q0p.svg")
+        no-repeat right;
+      background-position: 700px 200px;
+      @media (max-width: $mobile) {
+        background-position: 100px 200px;
+      }
+      opacity: 0.05;
+      content: "";
+      z-index: -1;
+    }
   }
 
   &__logo {
@@ -81,6 +82,17 @@ body {
   &__content-button {
     margin-top: 119px;
     @include adaptiveValue(" margin-top", 119, 64);
+  }
+}
+
+.canvas {
+  position: absolute;
+  @media (min-width: $tablet) {
+    @include adaptiveValue("right", 540, 200);
+    @include adaptiveValue("top", 260, 60);
+  }
+  @media (max-width: $tablet) {
+    display: none;
   }
 }
 
