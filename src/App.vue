@@ -8,6 +8,10 @@
 <script>
 export default {
   name: "app",
+  mounted() {
+    this.$store.dispatch("fetchProjects");
+    this.$store.dispatch("fetchDescription");
+  },
 };
 </script>
 <style lang="scss">

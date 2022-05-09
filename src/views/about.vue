@@ -13,20 +13,11 @@
             <img src="../assets/me.png" alt="" />
           </div>
           <div class="about-content__description">
-            I'm a 3rd year student pursuing Collage in Client Side Web
-            Applications 🎓 from Centre of Excellence in Economics and Finance.
-            I'm a passionate learner who's always willing to learn and work
-            across technologies and domains 💡. I love to explore new
-            technologies and leverage them to solve real-life problems ✨. Apart
-            from that I also love to guide and mentor newbies 👨🏻‍💻. I'm deep into
-            Web 🕸️ Development.
+            {{ description }}
           </div>
           <div class="about-content__description">
-            <ul>
-              <li>🌱 I’m currently learning Vue, TypeScript, Javascript</li>
-              <li>💬 Ask me about Vue.js, Gulp, TypeScript</li>
-              <li>📫 How to reach me kirillpanfile@gmail.com</li>
-              <li>⚡ Fun fact I started freelance at 15 (now Im 18)</li>
+            <ul v-for="(fact, index) in facts" :key="index">
+              <li>{{ fact }}</li>
             </ul>
           </div>
           <div class="about-button">
@@ -39,7 +30,16 @@
 </template>
 
 <script>
-export default {};
+import { mapState } from "vuex";
+export default {
+  name: "about",
+  computed: {
+    ...mapState({
+      description: (state) => state.description,
+      facts: (state) => state.facts,
+    }),
+  },
+};
 </script>
 
 <style></style>
