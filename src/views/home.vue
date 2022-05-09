@@ -15,7 +15,9 @@
           while at it
         </div>
         <div class="hero__content-button">
-          <app-button>Say Hello</app-button>
+          <router-link to="/portfolio">
+            <app-button>View Portfolio</app-button>
+          </router-link>
         </div>
       </div>
     </div>
@@ -29,6 +31,7 @@ export default {
   components: {
     appCanvas,
   },
+  computed: {},
 };
 </script>
 

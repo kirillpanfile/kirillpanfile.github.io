@@ -61,6 +61,7 @@ $responsiveType: 1;
 @import "base/null";
 
 body {
+  scroll-behavior: smooth;
   // Скролл заблокирован
   height: 100%;
   margin: 0;

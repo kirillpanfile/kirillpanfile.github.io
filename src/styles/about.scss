@@ -71,5 +71,4 @@
 .about-button {
   display: block;
   @include adaptiveValue("margin-top", 96, 48);
-  margin-bottom: 64px;
 }

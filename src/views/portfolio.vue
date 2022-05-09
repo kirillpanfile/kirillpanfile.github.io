@@ -8,17 +8,18 @@
           Some things i’ve been working on in the past few years:
         </div>
         <div class="projects-inner__list">
-          <div class="projects-inner__list-item list-item">
+          <div
+            class="projects-inner__list-item list-item"
+            v-for="(project, index) in projects"
+            :key="project.id"
+            :class="{ reversed: (index + 1) % 2 != 0 }"
+          >
             <div class="list-item__block list-block">
               <div class="list-block__title">
-                <a href=""> Remotely </a>
+                <a href=""> {{ project.name }} </a>
               </div>
               <div class="list-block__descr">
-                Remotely is a remote friendly-company — with our headquarters in
-                San Francisco, a second office in LA, and a strong commitment to
-                ensuring people can do great work here and thrive without having
-                to live near an office. This role is open to candidates across
-                the U.S.
+                {{ project.description }}
               </div>
               <div class="list-block__button">
                 <app-button>View project</app-button>
@@ -26,29 +27,7 @@
             </div>
             <div class="list-item__block list-block">
               <div class="list-block__image">
-                <img src="../assets/page-1.png" alt="" />
-              </div>
-            </div>
-          </div>
-          <div class="projects-inner__list-item list-item reversed">
-            <div class="list-item__block list-block">
-              <div class="list-block__title">
-                <a href=""> Brutal Design Library </a>
-              </div>
-              <div class="list-block__descr">
-                Brutal is a remote friendly-company — with our headquarters in
-                San Francisco, a second office in LA, and a strong commitment to
-                ensuring people can do great work here and thrive without having
-                to live near an office. This role is open to candidates across
-                the U.S.
-              </div>
-              <div class="list-block__button">
-                <app-button>View project</app-button>
-              </div>
-            </div>
-            <div class="list-item__block list-block">
-              <div class="list-block__image">
-                <img src="../assets/page-2.png" alt="" />
+                <img :src="require(`../assets/${project.img}`)" alt="" />
               </div>
             </div>
           </div>
@@ -59,7 +38,15 @@
 </template>
 
 <script>
-export default {};
+import { mapState } from "vuex";
+export default {
+  name: "projects",
+  computed: {
+    ...mapState({
+      projects: (state) => state.projects,
+    }),
+  },
+};
 </script>
 
 <style></style>

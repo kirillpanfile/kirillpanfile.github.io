@@ -16,7 +16,7 @@
           <img src="../assets/icons/3.png" alt="" />
         </button>
       </router-link>
-      <a href="https://instagram.com">
+      <a href="mailto:kirillpanfile@gmail.com">
         <button class="menu-icon">
           <img src="../assets/icons/4.png" alt="" />
         </button>
