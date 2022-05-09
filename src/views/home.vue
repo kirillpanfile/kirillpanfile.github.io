@@ -1,6 +1,5 @@
 <template>
   <!-- Hero Section -->
-  <app-bubbles></app-bubbles>
   <div class="hero">
     <div class="hero__container">
       <div class="hero__logo">Kirill Panfile<span>.</span></div>

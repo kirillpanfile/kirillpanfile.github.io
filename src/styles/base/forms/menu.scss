@@ -1,8 +1,7 @@
 .menu {
   max-width: 1000px;
   margin: 0 auto;
-  margin-top: 126px;
-  @include adaptiveValue("margin-top", 126, 100);
+  @include adaptiveValue("margin-top", 126, 80);
   &__inner {
     background: #111827;
     border: 1px solid #374151;

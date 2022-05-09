@@ -62,6 +62,9 @@ $responsiveType: 1;
 
 body {
   // Скролл заблокирован
+  height: 100%;
+  margin: 0;
+  padding: 0;
   .lock & {
     overflow: hidden;
     touch-action: none;
