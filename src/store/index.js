@@ -5,6 +5,7 @@ export default createStore({
     description: "",
     facts: "",
     projects: [],
+    DarkMode : true
   },
   getters: {
     getDescription(state) {
@@ -16,6 +17,9 @@ export default createStore({
     getProjects(state) {
       return state.projects;
     },
+    getDarkMode(state) {
+      return state.DarkMode;
+    }
   },
   mutations: {
     setDescription(state, payload) {
@@ -27,29 +31,23 @@ export default createStore({
     setProjects(state, payload) {
       state.projects = payload;
     },
+    changeMode(state) {
+      state.DarkMode = !state.DarkMode;
+    }
   },
   actions: {
     async fetchProjects({ commit }) {
       const response = await axios.get("/api/projects");
       commit("setProjects", response.data);
-      console.log(
-        "🚀 ~ file: index.js ~ line 35 ~ fetchProjects ~ response.data",
-        response.data
-      );
     },
     async fetchDescription({ commit }) {
       const response = await axios.get("/api/me");
       commit("setDescription", response.data[0].description);
-      console.log(
-        "🚀 ~ file: index.js ~ line 43 ~ fetchDescription ~ response.data.description",
-        response.data[0].description
-      );
       commit("setFacts", response.data[0].facts);
-      console.log(
-        "🚀 ~ file: index.js ~ line 45 ~ fetchDescription ~ response.data.facts",
-        response.data[0].facts
-      );
     },
+    changeMode({ commit }) {
+      commit("changeMode");
+    }
   },
   modules: {},
 });

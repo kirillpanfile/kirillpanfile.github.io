@@ -26,21 +26,29 @@
           <img src="../assets/icons/5.png" alt="" />
         </button>
       </a>
-      <a href="">
-        <button class="menu-icon">
-          <img src="../assets/icons/6.png" alt="" />
-        </button>
-      </a>
+      <button class="menu-icon" @click="changeMode">
+        <img v-if="getDarkMode === true" src="../assets/icons/6.png" alt="" />
+        <img v-if="getDarkMode === false" src="../assets/icons/7.png" alt="" />
+      </button>
     </div>
   </div>
 </template>
 
 <script>
+import { mapState } from "vuex";
 export default {
   name: "appMenu",
+  computed: {
+    ...mapState({
+      getDarkMode: (state) => state.DarkMode,
+    }),
+  },
   methods: {
     scrollToTop() {
       window.scrollTo(0, 0);
+    },
+    changeMode() {
+      this.$store.commit("changeMode");
     },
   },
 };
