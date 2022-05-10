@@ -2,6 +2,9 @@
 body {
   background: #121a29;
   height: max-content;
+  > * {
+    transition: all 0.4s ease-in-out;
+  }
 }
 .hero {
   &__container {
@@ -93,6 +96,24 @@ body {
   }
   @media (max-width: $tablet) {
     display: none;
+  }
+}
+
+.light {
+  background-color: #f9fafb;
+  .hero {
+    &__content-title {
+      color: #000;
+    }
+
+    &__content-descr {
+      color: #000;
+    }
+
+    &__content-button {
+      margin-top: 119px;
+      @include adaptiveValue(" margin-top", 119, 64);
+    }
   }
 }
 

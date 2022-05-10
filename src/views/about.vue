@@ -21,7 +21,7 @@
             </ul>
           </div>
           <div class="about-button">
-            <app-button>Say Hello</app-button>
+            <app-button>Download CV</app-button>
           </div>
         </div>
       </div>

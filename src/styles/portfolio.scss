@@ -113,3 +113,20 @@
     }
   }
 }
+
+.light {
+  .projects-inner {
+    &__title {
+      color: #000;
+    }
+  }
+  .list-block__title {
+    color: #000;
+  }
+  .list-block__descr {
+    color: #000;
+  }
+  .projects-inner__descr {
+    color: #000;
+  }
+}

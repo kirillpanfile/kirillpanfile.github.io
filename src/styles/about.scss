@@ -72,3 +72,18 @@
   display: block;
   @include adaptiveValue("margin-top", 96, 48);
 }
+
+.light {
+  .about-inner__title {
+    color: #000;
+  }
+  .about-inner__description {
+    color: #000;
+  }
+  .about-content__title {
+    color: #000;
+  }
+  .about-content__description {
+    color: #000;
+  }
+}

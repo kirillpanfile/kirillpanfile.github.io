@@ -13,7 +13,7 @@ export default {
     init() {
       const scene = new THREE.Scene();
       const camera = new THREE.PerspectiveCamera(50, 200 / 200, 0.1, 1000);
-      const renderer = new THREE.WebGLRenderer({ alpha: true });
+      const renderer = new THREE.WebGLRenderer({ antialias: true });
       renderer.setClearColor(0x000000, 0);
       const light = new THREE.DirectionalLight("hsl(0, 100%, 100%)");
       const geometry = new THREE.OctahedronGeometry(1, 0);
@@ -27,7 +27,7 @@ export default {
       scene.add(light);
       scene.add(cube);
       renderer.setSize(200, 200);
-      light.position.set(0, 0, 10);
+      light.position.set(1, 1, 10);
       camera.position.z = 5;
       this.$refs.canvas.appendChild(renderer.domElement);
       function animate() {

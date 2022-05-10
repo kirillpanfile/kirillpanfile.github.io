@@ -1,21 +1,13 @@
 <template>
-  <main :class="{ light: getDarkMode == false }">
-    <app-bubbles v-if="this.$route.name == 'home'"></app-bubbles>
-    <transition name="scale" mode="out-in">
-      <router-view />
-    </transition>
-    <app-menu></app-menu>
-  </main>
+  <app-bubbles v-if="this.$route.name == 'home'"></app-bubbles>
+  <transition name="scale" mode="out-in">
+    <router-view />
+  </transition>
+  <app-menu></app-menu>
 </template>
 <script>
-import { mapState } from "vuex";
 export default {
   name: "app",
-  computed: {
-    ...mapState({
-      getDarkMode: (state) => state.DarkMode,
-    }),
-  },
   mounted() {
     this.$store.dispatch("fetchProjects");
     this.$store.dispatch("fetchDescription");

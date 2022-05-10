@@ -39,3 +39,11 @@
     }
   }
 }
+
+.light {
+  .btn-primary {
+    &:hover {
+      color: $mainColor !important;
+    }
+  }
+}
