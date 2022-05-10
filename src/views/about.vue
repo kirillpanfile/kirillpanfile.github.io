@@ -1,8 +1,8 @@
 <template>
   <div class="about">
     <div class="about__container">
+      <app-logo></app-logo>
       <div class="about-inner">
-        <app-logo></app-logo>
         <h1 class="about-inner__title">About Me 👨‍</h1>
         <p class="about-inner__description">
           A brief intro to who i am and how i do what i do:

@@ -1,16 +1,29 @@
 <template>
-  <app-bubbles v-if="this.$route.name == 'home'"></app-bubbles>
-  <transition name="scale" mode="out-in">
-    <router-view />
+  <transition name="scale" v-if="isLoading">
+    <app-loader></app-loader>
   </transition>
-  <app-menu></app-menu>
+  <main v-else>
+    <app-bubbles v-if="this.$route.name == 'home'"></app-bubbles>
+    <transition name="scale" mode="out-in">
+      <router-view />
+    </transition>
+    <app-menu></app-menu>
+  </main>
 </template>
 <script>
 export default {
   name: "app",
+  data() {
+    return {
+      isLoading: true,
+    };
+  },
   mounted() {
     this.$store.dispatch("fetchProjects");
     this.$store.dispatch("fetchDescription");
+    setTimeout(() => {
+      this.isLoading = false;
+    }, 1000);
   },
 };
 </script>
@@ -28,5 +41,12 @@ export default {
 .scale-leave-to {
   opacity: 0;
   transform: scale(0.9);
+}
+
+.active {
+  display: block;
+}
+.hidden {
+  display: none;
 }
 </style>

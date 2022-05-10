@@ -8,5 +8,15 @@
     "name": "Brutal Design Library",
     "description": "Brutal is a remote friendly-company — with our headquarters in San Francisco, a second office in LA, and a strong commitment to ensuring people can do great work here and thrive without having to live near an office. This role is open to candidates across the U.S.",
     "img": "page-2.png"
+  },
+  {
+    "name": "Portfolio",
+    "description": "The portfolio is a simple website to show my work, skills, and information about me. I've done it in a minimalist format “That's one of my favorite formats of building websites”.",
+    "img": "portfolio.png"
+  },
+  {
+    "name": "IDMentor",
+    "description": "IDMentor - getElementById ,but better. I didn't find something similar to that in Vs Code Extensions, so I decided to make my extension which helps you grab faster elements from HTML and create JS variables with selectors.",
+    "img": "idmentor.png"
   }
 ]
