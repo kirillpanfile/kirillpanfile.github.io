@@ -15,14 +15,14 @@
             :class="{ reversed: (index + 1) % 2 != 0 }"
           >
             <div class="list-item__block list-block">
-              <div class="list-block__title">
-                <a href=""> {{ project.name }} </a>
-              </div>
+              <div class="list-block__title">🌌 {{ project.name }}</div>
               <div class="list-block__descr">
                 {{ project.description }}
               </div>
               <div class="list-block__button">
-                <app-button>View project</app-button>
+                <a target="_blank" :href="project.link">
+                  <app-button>View project</app-button>
+                </a>
               </div>
             </div>
             <div class="list-item__block list-block">
@@ -31,6 +31,12 @@
               </div>
             </div>
           </div>
+        </div>
+        <div class="projects-inner__descr" style="width: 100%">
+          💻 Ive got a lot of projects on my mind, but you can always check out
+          my
+          <a href="https://github.com/kirillpanfile" target="_blank">Github</a>
+          profile.
         </div>
       </div>
     </div>

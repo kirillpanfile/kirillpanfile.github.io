@@ -1,22 +1,44 @@
 [
   {
-    "name": "Remotely",
-    "description": "Remotely is a remote friendly-company — with our headquarters in San Francisco, a second office in LA, and a strong commitment to ensuring people can do great work here and thrive without having to live near an office. This role is open to candidates across the U.S.",
-    "img": "page-1.png"
-  },
-  {
-    "name": "Brutal Design Library",
-    "description": "Brutal is a remote friendly-company — with our headquarters in San Francisco, a second office in LA, and a strong commitment to ensuring people can do great work here and thrive without having to live near an office. This role is open to candidates across the U.S.",
-    "img": "page-2.png"
-  },
-  {
     "name": "Portfolio",
     "description": "The portfolio is a simple website to show my work, skills, and information about me. I've done it in a minimalist format “That's one of my favorite formats of building websites”.",
-    "img": "portfolio.png"
+    "img": "portfolio.png",
+    "link": "https://github.com/kirillpanfile/kirillpanfile.github.io"
+  },
+  {
+    "name": "Kyden",
+    "description": "I love fashion and I would like to see my future business as a clothing brand. Kyden is a demo of the website I would like to see. If you have any ideas about the design or the front of the website I am open to proposals.",
+    "img": "kyden.png",
+    "link": "https://github.com/kirillpanfile/Kyden"
   },
   {
     "name": "IDMentor",
     "description": "IDMentor - getElementById ,but better. I didn't find something similar to that in Vs Code Extensions, so I decided to make my extension which helps you grab faster elements from HTML and create JS variables with selectors.",
-    "img": "idmentor.png"
+    "img": "idmentor.png",
+    "link": "https://github.com/kirillpanfile/idmentor"
+  },
+  {
+    "name": "EasyBank",
+    "description": "Easybank  is a simple landing page made with HTML CSS JS and gulp. I created it with my gulp starter. This is a learning page to train my stack skills. I hope you will like it.",
+    "img": "easybank.png",
+    "link": "https://github.com/kirillpanfile/Easybank"
+  },
+  {
+    "name": "RunSmart",
+    "description": "RunSmart is a simple landing page made with HTML CSS JS. This is a learning page to train my stack skills. I hope you will like it.",
+    "img": "runsmart.png",
+    "link": "https://github.com/chirilpanfile/chirilpanfile.github.io/tree/master/Projects/Pulse"
+  },
+  {
+    "name": "Web-Developer",
+    "description": "Web-Developer is a simple landing page made with HTML CSS JS GULP. I created it with my gulp starter. This is a learning page to train my stack skills. I hope you will like it.",
+    "img": "web-developer.png",
+    "link": "https://github.com/chirilpanfile/chirilpanfile.github.io/tree/master/Projects/Portfolio"
+  },
+  {
+    "name": "IP Address Tracker",
+    "description": "IP Address Tracker is a simple page made with HTML CSS JS GULP for learning working with APIS, MAPS and IFrames. I created it with my gulp starter. This is a learning page to train my stack skills. I hope you will like it.",
+    "img": "ip-address-tracker.png",
+    "link": "https://github.com/kirillpanfile/IP-Tracker"
   }
 ]
