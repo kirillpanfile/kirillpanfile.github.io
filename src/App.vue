@@ -23,7 +23,7 @@ export default {
     this.$store.dispatch("fetchDescription");
     setTimeout(() => {
       this.isLoading = false;
-    }, 1000);
+    }, 700);
   },
 };
 </script>
