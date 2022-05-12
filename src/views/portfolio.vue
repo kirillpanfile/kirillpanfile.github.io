@@ -32,7 +32,10 @@
             </div>
           </div>
         </div>
-        <div class="projects-inner__descr" style="width: 100%">
+        <div
+          class="projects-inner__descr"
+          style="width: 100%; margin-top: 30px"
+        >
           💻 Ive got a lot of projects on my mind, but you can always check out
           my
           <a href="https://github.com/kirillpanfile" target="_blank">Github</a>
